@@ -44,6 +44,7 @@ a{
 /* Creates the 3 line "hamburger" menu icon itself */
 .nav-icon{
     background: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
     display: block;
     height: 2px;
     width: 18px;
@@ -113,7 +114,7 @@ nav ul li ul li:hover{
 /* Top: 60px; displays the nested item 60 pixels below it's parent element */
 /* Position: absolute; allows us to position the children relative to the parent */
 nav ul ul{
-    xdisplay: none;
+    display: none;
     position: absolute;
     top: 60px;
 }
@@ -124,4 +125,90 @@ nav ul ul li{
     float: none;
     display: list-item;
     position: relative;
+}
+
+/* All 3rd tier list items */
+/* Positions the children of a second tier menu item
+ to the right and down of the parent */
+nav ul ul ul li{
+    position: relative;
+    top: -60px;
+    left: 170px;
+}
+
+/* Tricky one!!! Come here to review later! */
+
+/* This is the rule that really makes the dropdowns work */
+
+/* A third tier ul that is a child of a hovered upon li 
+    in the second tier will inherit its display state */
+nav ul li:hover>ul{
+    display: inherit;
+}
+
+/* Any li with a child a element will get a '>' after it */
+li>a:after{
+    content: " >";
+}
+
+/*  Any ONLY child a element will NOT get the '>' after it */
+li>a:only-child:after{
+    content: " ";
+}
+
+/* ___________END DESKTOP VIEW RULES_____________*/
+
+/* BEGIN MOBILE VIEW OVERRIDE RULES */
+/* These rules apply up to 768px and then get switched off */
+@media all and (max-width: 768px){
+
+
+    nav{
+        margin: 0;
+    }
+
+    nav ul{
+        float: none;
+    }
+
+    .toggle+a, .menu{
+        display: none;
+    }
+
+    /* Decorates the .toggle elements */
+    .toggle{
+        display: block;
+        background-color: tomato;
+        padding: 0 20px;
+        color: white;
+        font-size: 20px;
+        line-height: 60px;
+        text-decoration: none;
+        border: none;
+    }
+
+    .toggle:hover{
+        background-color:black;
+    }
+
+    /* This rule makes the unordered lists all appear when you click the mobile menu icon */
+    /* Targets any id that begins with the word 'drop' */
+    /* All main list items have drop or drop-1 or drop-2 etc... */
+    [id^=drop]:checked+ul{
+        display:block;
+    }
+
+    nav ul li{
+        display: block;
+        width:100%;
+    }
+
+    nav ul ul .toggle, 
+    nav ul ul a{
+        padding: 0 40px;
+    }
+
+    nav ul ul ul a{
+        padding: 0 80px;
+    }
 }
