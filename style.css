@@ -103,3 +103,25 @@ nav a{
     line-height: 60px;
     text-decoration: none;
 }
+
+/* Covers all second tier menu items for their hover state */
+nav ul li ul li:hover{
+    background-color: black;
+}
+
+/* Hides elements of the nav list */
+/* Top: 60px; displays the nested item 60 pixels below it's parent element */
+/* Position: absolute; allows us to position the children relative to the parent */
+nav ul ul{
+    xdisplay: none;
+    position: absolute;
+    top: 60px;
+}
+
+/* All elements WITHIN a dropdown menu */
+nav ul ul li{
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
