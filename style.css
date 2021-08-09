@@ -17,7 +17,61 @@ a{
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
-p{
 
+/* Hides checkboxes that control menu either showing or not depending on mobile/desktop view */
+.toggle, [id^=drop] {
+  x  display:none;
 }
 
+
+#logo{
+    display: block;
+    padding: 0 30px;
+    float: left;
+    font-size: 20px;
+    line-height: 60px;
+}
+
+/* Controls the 3 line menu icon toggle functionality */
+#main-toggle{
+    outline: 3px solid black;
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+/* Creates the 3 line "hamburger" menu icon itself */
+.nav-icon{
+    background: white;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+}
+
+/* Middle Bar of the menu icon */
+.nav-icon:before, .nav-icon:after{
+    background: white;
+    content: " ";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/* Top Bar of the menu icon */
+.nav-icon:before{
+    top: 5px;
+}
+/* Bottom Bar of the menu icon */
+.nav-icon:after{
+    top: -5px;
+}
+
+/* _______________________________________________________ */
+
+.nav:after{
+    
+}
