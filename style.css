@@ -20,7 +20,7 @@ a{
 
 /* Hides checkboxes that control menu either showing or not depending on mobile/desktop view */
 .toggle, [id^=drop] {
-  x  display:none;
+    display:none;
 }
 
 
@@ -34,7 +34,6 @@ a{
 
 /* Controls the 3 line menu icon toggle functionality */
 #main-toggle{
-    outline: 3px solid black;
     cursor: pointer;
     float: right;
     padding: 28px 20px;
@@ -70,8 +69,37 @@ a{
     top: -5px;
 }
 
-/* _______________________________________________________ */
+/* ____________ul/li elements of the Menu_________ */
 
 .nav:after{
-    
+    content:"";
+    display:table;
+    clear:both;
+}
+
+/* all unordered lists within the nav tag */
+nav ul{
+    float: right;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* all list items within all unordered lists within the nav tag */
+
+nav ul li{
+    margin: 0;
+    float: left;
+    background-color:tomato;
+}
+
+/* Allows one to click on the entire button 
+    area not just the text within it */
+nav a{
+    display: block;
+    padding: 0 20px;
+    color:white;
+    font-size: 20px;
+    line-height: 60px;
+    text-decoration: none;
 }
