@@ -210,5 +210,35 @@ li>a:only-child:after{
 
     nav ul ul ul a{
         padding: 0 80px;
+        background-Color: magenta;
     }
+
+    nav ul li ul li .toggle,
+    nav ul ul a{
+        background-color: turquoise;
+    }
+
+    nav ul ul{
+        float: none;
+        position: static;
+        color: white;
+    }
+
+    /* All nested menu items are hidden by default */
+    nav ul ul li:hover>ul,
+    nav ul li:hover>ul{
+        display: none;
+    }
+
+    nav ul ul li{
+        display: block;
+        width: 100%;
+    }
+
+    /* Properly positions nested elements below their parent element */
+    nav ul ul ul li{
+        position: static;
+    }
+
+
 }
