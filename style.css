@@ -1,7 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=roboto);
 
+#background{
+    background: url("./images/cleo.jpg") center center fixed;
+    position: fixed;
+    top:0;
+}
+
 body{
-    background: maroon;
+    /* background: maroon; */
     font-size: 22px;
     line-height:32px;
     color: #fff;
