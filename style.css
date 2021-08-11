@@ -17,6 +17,10 @@ a{
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
+/* li:hover {
+    background-color: black;
+} */
+
 
 /* Hides checkboxes that control menu either showing or not depending on mobile/desktop view */
 .toggle, [id^=drop] {
@@ -106,7 +110,9 @@ nav a{
 }
 
 /* Covers all second tier menu items for their hover state */
-nav ul li ul li:hover{
+/* EDITTED: now covers all tiers and changes their colors */
+nav ul li ul li:hover,
+nav ul li:hover{
     background-color: black;
 }
 
@@ -187,7 +193,11 @@ li>a:only-child:after{
         border: none;
     }
 
-    .toggle:hover{
+    /* This rule makes it so that in mobile view, hovering
+     over ANY option will 'highlight' it the designated color */
+    .toggle:hover,
+    nav ul li:hover,
+    nav ul li ul li a:hover{
         background-color:black;
     }
 
