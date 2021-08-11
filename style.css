@@ -40,7 +40,7 @@ body{
     max-width: 1240px;
     font-size: 22px;
     line-height:32px;
-    color: #fff;
+    color: #e5e5e5;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
     margin:0;
     padding:0;
@@ -73,19 +73,37 @@ I would be very interested in hearing feedback as to why this happened */
     grid-area: 4/1/6/3
 } */
 
-.grid-parent{
+.parent{
     justify-content: flex-start;
     display: block;
 }
 
 .main-page-content{
-    background-color: #4c4c4c;
+    background-color: #404040;
     padding: 0 5% 0 5%;
 }
 
-.grid-parent img{
+.section-child-title{
+    border-bottom: 5px solid #e5e5e5;
+    padding-bottom: 10px;
+}
+
+.section-child-p{
+    font-size: 16px;
+}
+
+.r-image-30{
     width: 30%;
     float: right;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+.l-image-50{
+    width: 50%;
+    float: left;
+    margin-right: 5%;
+    margin-bottom: 5%;
 }
 
 header{
@@ -95,7 +113,7 @@ header{
 /* nav bar / menu css */
 
 a{
-    color:#fff;
+    color:#e5e5e5;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
@@ -177,7 +195,7 @@ nav ul{
 nav ul li{
     margin: 0;
     float: left;
-    background-color:#9baeff;
+    background-color:#6c79b2;
 }
 
 /* Allows one to click on the entire button 
@@ -185,7 +203,7 @@ nav ul li{
 nav a{
     display: block;
     padding: 0 20px;
-    color:white;
+    color:#e5e5e5;
     font-size: 20px;
     line-height: 60px;
     text-decoration: none;
@@ -266,7 +284,7 @@ li>a:only-child:after{
     /* Decorates the .toggle elements */
     .toggle{
         display: block;
-        background-color: #9baeff;
+        background-color: #6c79b2;
         padding: 0 20px;
         color: white;
         font-size: 20px;
@@ -302,12 +320,12 @@ li>a:only-child:after{
 
     nav ul ul ul a{
         padding: 0 80px;
-        background-color: #7b8bcc;
+        background-color: #8b9ce5;
     }
 
     nav ul li ul li .toggle,
     nav ul ul a{
-        background-color: #8b9ce5;
+        background-color: #7b8bcc;
     }
 
     nav ul ul{
@@ -332,9 +350,21 @@ li>a:only-child:after{
         position: static;
     }
 
+    /* Adjusting images to mobile view
+    Now they take 100% of the width */
+
+    .r-image-30{
+        width: 100%;
+    }
+
+    .l-image-50{
+        width: 100%;
+    }
+
 
 }
 
+/* Centers everything within the body tag  */
 @media all and (min-width: 1240px){
 
     body{
