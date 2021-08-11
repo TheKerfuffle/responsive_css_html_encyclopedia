@@ -1,5 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=roboto);
 
+/* As for the color scheme, I used color-hex.com and used darkening  shades of colors
+for the dropdown menus in the mobile view so that you can keep track of which tier the 
+color represents. For desktop view, I used one distinct one distinct color for dropdowns 
+as the structure of the tiers suggests where you are, making recoloring redundant.
+I alsu used a tint for the hover state of the elements, 
+as well as an analagous color for the background color of the main body */
+
 #background{
     background: url("./images/cleo.jpg") center center fixed;
     position: fixed;
@@ -7,7 +14,7 @@
 }
 
 body{
-    /* background: maroon; */
+    background: #5d4d7f;
     font-size: 22px;
     line-height:32px;
     color: #fff;
@@ -101,7 +108,7 @@ nav ul{
 nav ul li{
     margin: 0;
     float: left;
-    background-color:tomato;
+    background-color:#9baeff;
 }
 
 /* Allows one to click on the entire button 
@@ -119,7 +126,7 @@ nav a{
 /* EDITTED: now covers all tiers and changes their colors */
 nav ul li ul li:hover,
 nav ul li:hover{
-    background-color: black;
+    background-color: #b9c6ff;
 }
 
 /* Hides elements of the nav list */
@@ -190,7 +197,7 @@ li>a:only-child:after{
     /* Decorates the .toggle elements */
     .toggle{
         display: block;
-        background-color: tomato;
+        background-color: #9baeff;
         padding: 0 20px;
         color: white;
         font-size: 20px;
@@ -204,7 +211,7 @@ li>a:only-child:after{
     .toggle:hover,
     nav ul li:hover,
     nav ul li ul li a:hover{
-        background-color:black;
+        background-color:#b9c6ff;
     }
 
     /* This rule makes the unordered lists all appear when you click the mobile menu icon */
@@ -226,12 +233,12 @@ li>a:only-child:after{
 
     nav ul ul ul a{
         padding: 0 80px;
-        background-Color: magenta;
+        background-color: #7b8bcc;
     }
 
     nav ul li ul li .toggle,
     nav ul ul a{
-        background-color: turquoise;
+        background-color: #8b9ce5;
     }
 
     nav ul ul{
