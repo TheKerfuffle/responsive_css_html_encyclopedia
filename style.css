@@ -114,8 +114,12 @@ header{
     padding-top: 2rem;
 }
 
-.socials a{
+.socials a {
     width: 10%;
+}
+
+.socials a img:hover{
+    background-color: #b9c6ff;
 }
 
 /* 
