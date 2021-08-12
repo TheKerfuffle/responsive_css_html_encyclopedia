@@ -89,7 +89,7 @@ header{
 .banner{
     width: 100%;
     height: 75%;
-    background: url("./images/cleo_hand_hold.jpeg");
+    background: url("/static/images/cleo_hand_hold.jpeg");
     background-position: center !important;
     background-repeat: no-repeat;
     background-attachment: fixed !important;
