@@ -32,7 +32,8 @@ html, body {
     padding: 0;
     top: 0;
     min-width: 240;
-    background-color: #000000;
+    background-color: #404040;
+    height: 100%;
 }
 
 body{
@@ -84,6 +85,7 @@ header{
 
 .main-page-content{
     background-color: #404040;
+    height: 100vh;
     padding: 0 5% 0 5%;
 }
 
@@ -119,6 +121,20 @@ header{
 
 header{
     max-width: 1240px;
+}
+
+/* Parallax Image effect for inbetween sections */
+
+.parallax-img {
+    height: 100%;
+    background-attachment: fixed !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-1{
+    background: url("../images/cleo_sneeze.jpeg");
 }
 
 /* nav bar / menu css */
@@ -277,7 +293,7 @@ li>a:only-child:after{
 
 /* BEGIN MOBILE VIEW OVERRIDE RULES */
 /* These rules apply up to 768px and then get switched off */
-@media all and (max-width: 768px){
+@media all and (max-width: 820px){
 
 
     nav{
