@@ -75,7 +75,34 @@ I would be very interested in hearing feedback as to why this happened */
 } */
 
 header{
-    padding: 0 5% 0 5%;
+    position: fixed;
+    top:0;
+    width: 100%;
+    background-color:#6c79b2;
+}
+
+.banner{
+    width: 100%;
+    height: 75%;
+    background: url("./images/cleo_hand_hold.jpeg");
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed !important;
+}
+
+/* The banner h3 is the Greetings! That scrolls off the screen as you scroll down
+I tried several things to get it to stick to the image but had trouble  */
+.banner h3{
+    text-align: center;
+    padding: 25%;
+    word-wrap:normal;
+    font-size: 50px;
+    background-attachment: scroll;
+}
+
+.socials{
+    width: 100%;
+    height: 40%;
 }
 
 .parent{
@@ -162,6 +189,7 @@ a{
 #logo{
     display: block;
     /* padding: 0 30px; */
+    padding-left: 2%;
     float: left;
     font-size: 20px;
     line-height: 60px;
@@ -284,14 +312,14 @@ nav ul li:hover>ul{
 }
 
 /* Any li with a child a element will get a '>' after it */
-li>a:after{
+/* li>a:after{
     content: " >";
-}
+} */
 
 /*  Any ONLY child a element will NOT get the '>' after it */
-li>a:only-child:after{
+/* li>a:only-child:after{
     content: " ";
-}
+} */
 
 /* ___________END DESKTOP VIEW RULES_____________*/
 
@@ -381,8 +409,13 @@ li>a:only-child:after{
         position: static;
     }
 
-    /* Adjusting images to mobile view
+    /* Adjusting images/banner text to mobile view
     Now they take 100% of the width */
+
+    .banner h3{
+        font-size: 20px;
+
+    }
 
     .r-image-30{
         width: 100%;
