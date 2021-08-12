@@ -128,13 +128,17 @@ header{
 .parallax-img {
     height: 100%;
     background-attachment: fixed !important;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
 }
 
 .parallax-1{
     background: url("../images/cleo_sneeze.jpeg");
+}
+
+.parallax-2{
+    background: url("../images/cleo_blep.jpeg");
 }
 
 /* nav bar / menu css */
