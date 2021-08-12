@@ -101,9 +101,43 @@ I tried several things to get it to stick to the image but had trouble  */
 }
 
 .socials{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
     width: 100%;
-    height: 40%;
+    height: 2rem;
+    min-height: 200px;
+    padding-top: 2rem;
 }
+
+.socials a{
+    width: 10%;
+}
+
+.socials a img{
+    /* height: 5%; */
+    /* background-color: #6c79b2; */
+    /* margin-left: 5%; */
+    /* color: #6c79b2; */
+}
+
+/* 
+.socials-mail{
+    background: url("./icons/envelope-solid.svg");
+}
+.socials-reddit{
+    background: url("./icons/reddit-brands.svg");
+}
+.socials-github{
+    background: url("./icons/github-brands.svg");
+}
+.socials-twitter{
+    background: url("./icons/twitter-brands.svg";)
+}
+.socials-facebook{
+    background: url("./icons/facebook-brands.svg");
+} 
+*/
 
 .parent{
     justify-content: flex-start;
@@ -414,7 +448,6 @@ nav ul li:hover>ul{
 
     .banner h3{
         font-size: 20px;
-
     }
 
     .r-image-30{
@@ -423,6 +456,10 @@ nav ul li:hover>ul{
 
     .l-image-50{
         width: 100%;
+    }
+
+    .socials{
+        min-height: 100px;
     }
 
 
