@@ -1,11 +1,12 @@
+/* I really like Roboto Font. My Resume also uses it */
 @import url(https://fonts.googleapis.com/css?family=roboto);
 
-/* As for the color scheme, I used color-hex.com and used darkening  shades of colors
+/* As for the color scheme, I used color-hex.com and used darkening shades of colors
 for the dropdown menus in the mobile view so that you can keep track of which tier the 
 color represents. For desktop view, I used one distinct one distinct color for dropdowns 
 as the structure of the tiers suggests where you are, making recoloring redundant.
-I alsu used a tint for the hover state of the elements, 
-as well as an analagous color for the background color of the main body */
+I also used a 'tint' for the hover state of the elements, 
+as well as an 'analagous' dark color for the background color of the main body */
 
 /* #background{
     background: url("./images/cleo.jpg") center center fixed;
@@ -25,33 +26,7 @@ as well as an analagous color for the background color of the main body */
     z-index: 1; 
 } */
 
-/* html, body tags general styling  */
-
-html, body {
-    margin: 0;
-    padding: 0;
-    top: 0;
-    min-width: 240;
-    background-color: #404040;
-    height: 100%;
-}
-
-body{
-    background: #404040;
-    max-width: 1240px;
-    font-size: 22px;
-    line-height:32px;
-    color: #ffffff;
-    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-    margin:0;
-    padding:0;
-    word-wrap:break-word !important;
-    font-family: "roboto", sans-serif;
-}
-
-/* _____________Content within body tag____________________ */
-
-
+/* ______________________ CSS GRID ______________________ *FAILED TO IMPLEMENT */
 /* Couldn't figure out what I was doing wrong with the css grid tags 
 so I abandoned it for now and tried something a bit more simple, less rigid */
 /* might have something to do with the fr unit which vscode didn't seem to recognize? 
@@ -74,13 +49,43 @@ I would be very interested in hearing feedback as to why this happened */
     grid-area: 4/1/6/3
 } */
 
+
+
+/* html, body tags general styling  */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    min-width: 240;
+    background-color: #404040;
+    height: 100%;
+}
+
+body{
+    background: #404040;
+    max-width: 1240px;
+    font-size: 22px;
+    line-height:32px;
+    color: #ffffff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    margin:0;
+    padding:0;
+    word-wrap: break-word !important;
+    font-family: "roboto", sans-serif;
+}
+
+/* _____________Contents of header____________________ */
 header{
     position: fixed;
     top:0;
     width: 100%;
+    max-width: 1240px;
     background-color:#6c79b2;
 }
 
+/* _____________Contents of body____________________ */
+/* Banner is not as much a Banner as it is a Welcome Image */
 .banner{
     width: 100%;
     height: 75%;
@@ -90,8 +95,7 @@ header{
     background-attachment: fixed !important;
 }
 
-/* The banner h3 is the Greetings! That scrolls off the screen as you scroll down
-I tried several things to get it to stick to the image but had trouble  */
+/* The banner h3 is the Greetings! That scrolls off the screen as you scroll down */
 .banner h3{
     text-align: center;
     padding: 25%;
@@ -114,13 +118,6 @@ I tried several things to get it to stick to the image but had trouble  */
     width: 10%;
 }
 
-.socials a img{
-    /* height: 5%; */
-    /* background-color: #6c79b2; */
-    /* margin-left: 5%; */
-    /* color: #6c79b2; */
-}
-
 /* 
 .socials-mail{
     background: url("./icons/envelope-solid.svg");
@@ -139,15 +136,18 @@ I tried several things to get it to stick to the image but had trouble  */
 } 
 */
 
-.parent{
-    justify-content: flex-start;
-    display: block;
-}
-
+/* Container for everything */
 .main-page-content{
     background-color: #404040;
     height: 100vh;
     padding: 0 5% 0 5%;
+}
+
+/* parent in this context is a parent for a new section of content on the page */
+/* Usually a title, text and an image */
+.parent{
+    justify-content: flex-start;
+    display: block;
 }
 
 .section-child-title{
@@ -160,6 +160,7 @@ I tried several things to get it to stick to the image but had trouble  */
     padding-bottom: 5%;
 }
 
+/* Main Content Image modifiers */
 .r-image-30{
     width: 30%;
     float: right;
@@ -178,10 +179,6 @@ I tried several things to get it to stick to the image but had trouble  */
     width: 100%;
     float: left;
     margin-bottom: 5%;
-}
-
-header{
-    max-width: 1240px;
 }
 
 /* Parallax Image effect for inbetween sections */
@@ -209,17 +206,12 @@ a{
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
-/* li:hover {
-    background-color: black;
-} */
-
-
 /* Hides checkboxes that control menu either showing or not depending on mobile/desktop view */
 .toggle, [id^=drop] {
     display:none;
 }
 
-
+/* The 'Logo' or in this case, our subject: Cleo, The One-Eyed Wonder */
 #logo{
     display: block;
     /* padding: 0 30px; */
@@ -268,7 +260,6 @@ a{
 }
 
 /* ____________ul/li elements of the Menu_________ */
-
 .nav:after{
     content:"";
     display:table;
@@ -284,7 +275,6 @@ nav ul{
 }
 
 /* all list items within all unordered lists within the nav tag */
-
 nav ul li{
     margin: 0;
     float: left;
@@ -303,7 +293,7 @@ nav a{
 }
 
 /* Covers all second tier menu items for their hover state */
-/* EDITTED: now covers all tiers and changes their colors */
+/* EDITTED: now covers all tiers and changes their background color */
 nav ul li ul li:hover,
 nav ul li:hover{
     background-color: #b9c6ff;
@@ -345,6 +335,7 @@ nav ul li:hover>ul{
     display: inherit;
 }
 
+/* REMOVED - Made things look sloppy. Would prefer an actual icon */
 /* Any li with a child a element will get a '>' after it */
 /* li>a:after{
     content: " >";
@@ -355,11 +346,16 @@ nav ul li:hover>ul{
     content: " ";
 } */
 
-/* ___________END DESKTOP VIEW RULES_____________*/
 
-/* BEGIN MOBILE VIEW OVERRIDE RULES */
+
+/* ___________END DESKTOP VIEW RULES___________*/
+
+
+
+/* ___________BEGIN MOBILE VIEW OVERRIDE RULES___________ */
+
 /* These rules apply up to 768px and then get switched off */
-@media all and (max-width: 820px){
+@media all and (max-width: 768px){
 
 
     nav{
@@ -465,7 +461,7 @@ nav ul li:hover>ul{
 
 }
 
-/* Centers everything within the body tag  */
+/* Centers everything within the body tag above the predetermined resolution of 1240px wide */
 @media all and (min-width: 1240px){
 
     body{
