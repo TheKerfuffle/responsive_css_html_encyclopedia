@@ -12,6 +12,10 @@ This is an assigned test project done for the media junction front end developme
 - Sticky Header - for easier navigation throughout the page.
 - Parallax Images - I have always been fascinated by this effect and wanted to find out how to do it!
 
+Still needed to include:
+
+- Active classes for current page - Will require me dusting off jQuery as I couldn't make it happen without it
+
 ## Reflections
 
 To say that I am a beginner with CSS would be an understatement. For much of my time coding, I have used css 
